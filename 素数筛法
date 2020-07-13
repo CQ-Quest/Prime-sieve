@@ -15,7 +15,7 @@ if(isPrime[i])    cout<<i<<endl;
 }
 
 前缀数组+线性筛
- 
+ （大区间整数）
 const int maxn = 1e7 + 5;
  
 int pre[maxn];
