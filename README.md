@@ -8,18 +8,18 @@
 简称：埃氏筛，时间复杂度O(nloglogn)  
 Key code:  
 
-	const int MAXN = 100007;  
-	bool cheak[MAXN];//素数为false   
-	int prime[MAXN];//存第i个素数的值   
+	const int maxn = 100007;  
+	bool cheak[maxn];//素数为false   
+	int prime[maxn];//存第i个素数的值   
 	int cnt;//素数个数   
 	void Prime()  
 	{  
-		for(int i = 2; i <= MAXN; i++)  
+		for(int i = 2; i <= maxn; i++)  
 		{  
 			if(!cheak[i])  
 			{  
 				prime[++cnt] = i;  
-				for(int j = 2*i; j <= MAXN; j += i)  
+				for(int j = i*i; j <= maxn; j += i)  
 				cheak[j] = true;  
 			}  
 		}  
