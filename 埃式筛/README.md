@@ -1,5 +1,5 @@
 # 埃式筛  
-
+https://pic1.zhimg.com/80/v2-224a9aeda1e9bf60898f8a3f3cbb182f_720w.png
 
     埃拉托斯特尼筛法（太长了~）  
     简称：埃氏筛，时间复杂度O(nloglogn)  
