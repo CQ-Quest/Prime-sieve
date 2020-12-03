@@ -40,7 +40,7 @@ Key code:
 			for(int j=1;j<=cnt&&i*prime[j]<=MAXN;j++)  
 			{  
 				cheak[i*prime[j]] =true;  
-				if(i*prime[j] == 0)  
+				if(i%prime[j] == 0)  
 				break;  
 			}  
 			}  
