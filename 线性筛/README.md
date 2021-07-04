@@ -42,3 +42,31 @@ Key code:
 			}  
 		}  
 	}  
+
+# 大区间筛法
+	typedef long long ll;
+	bool cheak[maxn];
+	bool cheak_small[maxn];
+	//对区间[a,b)内的整数执行筛法。isprime[i - a]=true <=> i是素数
+	void Prime(ll a,ll b){
+		for(ll i=0;i*i<b;i++)  cheak_small[i]=true;
+		for(ll i=0;i<b-a;i++) cheak[i]=true;
+		for(ll i=2;i<b-a;i++){
+			for(ll j=2*i;j*j<b;j+=i) cheak_small[i]=true;
+			for(ll j=max(2ll,(a+i-1)/i)*i;j<b;j+=i) cheak[j-a]=false;
+			//(a+i-1)/i为[a,b)区间内的第一个数至少为i的多少倍
+		}
+	}
+	int main(){
+		ll a,b;
+		scanf("%lld %lld",&a,&b); 
+			Prime(a,b);
+			int cnt=0;
+			for(ll j=0; j<b-a; j++)
+		{
+		    if(cheak[j])cnt++;
+		}
+		if(a==1)cnt--;
+		printf("%d\n",cnt);
+		return 0;
+	}
